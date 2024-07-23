@@ -1,12 +1,24 @@
 {
   "name": "regex-mapper",
   "version": "0.0.2",
+  "description": "A small utility library that provides functions for mapping and matching strings against a set of regular expressions.",
+  "keywords": ["regex", "mapper"],
+  "homepage": "https://github.com/snomiao/regexMapper#readme",
+  "bugs": {
+    "url": "https://github.com/snomiao/regexMapper/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snomiao/regexMapper.git"
+  },
+  "license": "MIT",
   "author": "snomiao <snomiao@gmail.com>",
   "type": "module",
   "exports": {
     "import": "./dist/index.js",
     "types": "./index.ts"
   },
+  "main": "index.ts",
   "module": "index.ts",
   "types": "./index.ts",
   "files": [
@@ -20,18 +32,14 @@
     "release": "bunx standard-version && git push --follow-tags && npm publish",
     "test": "bun test"
   },
+  "dependencies": {
+    "@snomiao/die": "^1.2.3"
+  },
   "devDependencies": {
     "@types/bun": "^1.1.6",
     "@types/jest": "^29.5.12"
   },
   "peerDependencies": {
     "typescript": "^5.5.4"
-  },
-  "dependencies": {
-    "@snomiao/die": "^1.2.3"
-  },
-  "description": "A small utility library that provides functions for mapping and matching strings against a set of regular expressions.",
-  "main": "index.ts",
-  "keywords": [],
-  "license": "MIT"
+  }
 }
