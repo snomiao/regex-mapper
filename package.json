@@ -29,5 +29,9 @@
   },
   "dependencies": {
     "@snomiao/die": "^1.2.3"
-  }
+  },
+  "description": "A small utility library that provides functions for mapping and matching strings against a set of regular expressions.",
+  "main": "index.ts",
+  "keywords": [],
+  "license": "MIT"
 }
