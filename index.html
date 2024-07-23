@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regex Mapper Example</title>
+  </head>
+  <body>
+    <h1>Regex Mapper Example</h1>
+    Check console log
+    <script src="https://cdn.jsdelivr.net/npm/regex-mapper@0.0.2/dist/index.umd.js"></script>
+    <script>
+      // Assuming that the module exposes a global "regexMapper" object
+      const { regexMapper, regexMatcher } = RegexMapper;
+
+      // Define some regular expressions
+      const regexes = {
+        "greeting": "^hello",
+        "number": "\\d+",
+        "ending": "world$",
+      }
+
+      // Example strings to match
+      const strings = ["hello123", "world", "123", "hello world", "test"];
+
+      // Use the regexMapper function to map each string to labels based on the regular expressions
+      const mappedStrings = strings.map(regexMapper(regexes));
+
+      // Use the regexMatcher function to find matches for a single string
+      const singleMatches = regexMatcher(regexes)("hello123");
+
+      console.info("Mapped Strings:", mappedStrings);
+      console.info("Single Matches for 'hello123':", singleMatches);
+    </script>
+  </body>
+</html>
