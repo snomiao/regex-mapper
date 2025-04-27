@@ -2,7 +2,10 @@
   "name": "regex-mapper",
   "version": "0.0.2",
   "description": "A small utility library that provides functions for mapping and matching strings against a set of regular expressions.",
-  "keywords": ["regex", "mapper"],
+  "keywords": [
+    "regex",
+    "mapper"
+  ],
   "homepage": "https://github.com/snomiao/regexMapper#readme",
   "bugs": {
     "url": "https://github.com/snomiao/regexMapper/issues"
@@ -30,14 +33,17 @@
     "build:umd": "bunx rollup dist/index.js --file dist/index.umd.js --format umd --name \"RegexMapper\"",
     "prerelease": "bun run build && bun run test",
     "release": "bunx standard-version && git push --follow-tags && npm publish",
-    "test": "bun test"
+    "test": "bun test",
+    "prepare": "husky"
   },
   "dependencies": {
     "phpdie": "^1.2.18"
   },
   "devDependencies": {
     "@types/bun": "^1.1.6",
-    "@types/jest": "^29.5.12"
+    "@types/jest": "^29.5.12",
+    "husky": "^9.1.7",
+    "semantic-release": "^24.2.3"
   },
   "peerDependencies": {
     "typescript": "^5.5.4"
