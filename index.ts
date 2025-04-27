@@ -1,4 +1,4 @@
-import DIE from "@snomiao/die";
+import DIE from "phpdie";
 export const regexMapper = <M extends Record<string, RegExp | string>>(
   map: M
 ) => {

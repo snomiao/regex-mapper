@@ -24,11 +24,11 @@ Creates a function that maps a given string to a key, based on the regular expre
 #### Usage
 
 ```typescript
-import { regexMapper } from './regex-utils';
+import { regexMapper } from 'regex-mapper';
 
 const map = {
   greeting: /^hello/,
-  farewell: /bye$/,
+  farewell: 'bye$', // also works as regexp
 };
 
 const match = regexMapper(map);
@@ -45,11 +45,11 @@ Similar to `regexMapper`, but throws an error when no match is found.
 #### Usage
 
 ```typescript
-import { regexMapperStrict } from './regex-utils';
+import { regexMapperStrict } from 'regex-mapper';
 
 const map = {
   greeting: /^hello/,
-  farewell: /bye$/,
+  farewell: 'bye$', // also works as regexp
 };
 
 const matchStrict = regexMapperStrict(map);
@@ -66,7 +66,7 @@ Creates a function that returns all keys whose corresponding regular expression 
 #### Usage
 
 ```typescript
-import { regexMatcher } from './regex-utils';
+import { regexMatcher } from 'regex-mapper';
 
 const map = {
   greeting: /^hello/,
